@@ -23,7 +23,7 @@
                 {% for sku in skus %}
                     <li>
                         {# fastDFS: 商品图片显示: sku.default_image.url #}
-                        <a href="detail.html"><img src="{{ sku.default_image }}"></a>
+                        <a href="detail.html"><img src="{{ sku.default_image.url }}"></a>
                         <h4><a href="detail.html">{{ sku.id }}. {{ sku.name }}</a></h4>
                         <div class="operate">
                             <span class="prize">￥{{ sku.price }}</span>

@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import View
-
+from django_redis import get_redis_connection
 from apps.goods.models import GoodsCategory, IndexSlideGoods, IndexPromotion, IndexCategoryGoods
 
 
@@ -27,7 +27,6 @@ class IndexView(View):
             print(e)
 
         # 类别商品数据
-
         for c in categories:
             # 查询当前类别所有的文字商品和图片商品
             text_skus = IndexCategoryGoods.objects.filter(
@@ -41,8 +40,20 @@ class IndexView(View):
             # 动态地给类别新增实例属性
             c.img_skus = img_skus
 
-        # 购物车商品数量
+        # 购物车商品数量,经常变化,不能缓存
         cart_count = 0
+        # 如果用户登录,就获取购物车数据
+        if request.user.is_authenticated():
+            # 创建redis_conn对象
+            redis_conn = get_redis_connection('default')
+            # 获取用户id
+            user_id = request.user.id
+            key = 'cart_%s' % user_id
+            # 从redis中获取购物车数据,返回字典
+            cart_dict = redis_conn.hgetall(key)
+            # 遍历购物车字典的值,累加购物车的值
+            for value in cart_dict.values():
+                cart_count += int(value)
 
         # 定义模板显示的数据
         context = {
@@ -51,6 +62,8 @@ class IndexView(View):
             'promotions':promotions,
             'cart_count':cart_count,
         }
+        # 更新cart_count的值
+        # context.update(cart_count=cart_count)
 
         # 响应请求,显示模板
         return render(request, 'index.html', context)

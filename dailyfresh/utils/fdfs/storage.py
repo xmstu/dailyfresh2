@@ -13,7 +13,7 @@ class FdfsStorage(FileSystemStorage):
         :return:
         """
         # 保存文件到fdfs服务器
-        client = Fdfs_client('/home/python/PycharmProjects/dailyfresh/utils/fdfs/client.conf')
+        client = Fdfs_client('./client.conf')
         try:
             body = content.read()
             my_dict = client.upload_by_buffer(body)
