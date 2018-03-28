@@ -26,22 +26,19 @@
     </div>
 
     <div class="center_con clearfix">
+    <ul class="subnav fl">
         {# 商品类别  #}
-        <ul class="subnav fl">
-            <li><a href="#model01" class="fruit">新鲜水果</a></li>
-            <li><a href="#model02" class="seafood">海鲜水产</a></li>
-            <li><a href="#model03" class="meet">猪牛羊肉</a></li>
-            <li><a href="#model04" class="egg">禽类蛋品</a></li>
-            <li><a href="#model05" class="vegetables">新鲜蔬菜</a></li>
-            <li><a href="#model06" class="ice">速冻食品</a></li>
-        </ul>
-        {# 商品轮播图  #}
+        {% for category in categories %}
+            <li><a href="#model0{{ forloop.counter }}" class="{{ category.logo }}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+
         <div class="slide fl">
             <ul class="slide_pics">
-                <li><img src="{% static 'images/slide.jpg' %}" alt="幻灯片"></li>
-                <li><img src="{% static 'images/slide02.jpg' %}" alt="幻灯片"></li>
-                <li><img src="{% static 'images/slide03.jpg' %}" alt="幻灯片"></li>
-                <li><img src="{% static 'images/slide04.jpg' %}" alt="幻灯片"></li>
+                {# 商品轮播图  #}
+                {% for slide_good in slide_goods %}
+                <li><img src="{{ slide_good.image.url }}" alt="幻灯片"></li>
+                {% endfor %}
             </ul>
             <div class="prev"></div>
             <div class="next"></div>
@@ -49,39 +46,46 @@
         </div>
         {# 商品促销活动 #}
         <div class="adv fl">
-            <a href="#"><img src="{% static 'images/adv01.jpg' %}"></a>
-            <a href="#"><img src="{% static 'images/adv02.jpg' %}"></a>
+            {% for promotion in promotions %}
+            <a href="#"><img src="{{ promotion.image.url }}"></a>
+            {% endfor %}
         </div>
     </div>
 
+
+    {% for category in categories %}
     <div class="list_model">
         <div class="list_title clearfix">
-            <h3 class="fl" id="model01">新鲜水果</h3>
+            <h3 class="fl" id="model01">{{ category.name }}</h3>
             <div class="subtitle fl">
                 <span>|</span>
 
                 {# 一个文字商品 #}
-                <a href="#">鲜芒</a>
-
+                {% for c_sku in category.text_skus %}
+                    <a href="#">{{ c_sku.sku.name }}</a>
+                {% endfor %}
             </div>
             <a href="#" class="goods_more fr" id="fruit_more">查看更多 ></a>
         </div>
 
         <div class="goods_con clearfix">
-            <div class="goods_banner fl"><img src="{% static 'images/banner01.jpg' %}"></div>
+            <div class="goods_banner fl"><img src="{{ category.image.url }}"></div>
             <ul class="goods_list fl">
 
                 {# 一个图片商品 #}
+                {% for c_sku in category.img_skus %}
                 <li>
-                    <h4><a href="#">草莓</a></h4>
-                    <a href="#"><img src="{% static 'images/goods/goods003.jpg' %}"></a>
-                    <div class="prize">¥ 30.00</div>
+                    <h4><a href="#">{{ c_sku.sku.name }}</a></h4>
+                    <a href="#"><img src="{{ c_sku.sku.default_image.url }}"></a>
+                    <div class="prize">¥ {{ c_sku.sku.price }}</div>
                 </li>
+                {% endfor %}
 
             </ul>
         </div>
     </div>
 
+    {% endfor %}
 {% endblock %}
 
 {% block bottom_js %}
