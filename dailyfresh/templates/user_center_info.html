@@ -21,17 +21,17 @@
             <ul class="goods_type_list clearfix">
 
                 {% for sku in skus %}
-                <li>
-                    <a href="detail.html"><img src="{{ sku.default_image }}"></a>
-                    <h4><a href="detail.html">{{ sku.id }}, {{ sku.name }}</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥{{ sku.price }}</span>
-                        <span class="unit">{{ sku.price }}/{{ sku.unit }}</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
+                    <li>
+                        {# fastDFS: 商品图片显示: sku.default_image.url #}
+                        <a href="detail.html"><img src="{{ sku.default_image }}"></a>
+                        <h4><a href="detail.html">{{ sku.id }}. {{ sku.name }}</a></h4>
+                        <div class="operate">
+                            <span class="prize">￥{{ sku.price }}</span>
+                            <span class="unit">{{ sku.price }}/{{ sku.unit }}</span>
+                            <a href="#" class="add_goods" title="加入购物车"></a>
+                        </div>
+                    </li>
                 {% endfor %}
-
             </ul>
         </div>
     </div>

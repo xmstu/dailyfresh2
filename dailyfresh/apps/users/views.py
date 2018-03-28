@@ -282,11 +282,19 @@ class UserInfoView(LoginRequiredViewMixin, View):
         skus = []  # 保存用户历史浏览记录,保存的商品顺序与redis中查询的商品id顺序一致
         for id in goods_ids:
             try:
-                sku = GoodsSKU.objects.filter(id=id)
+                # 这里要用到原生对象,用get方法,不能用filter方法得到的queryset对象
+                sku = GoodsSKU.objects.get(id=id)
+                # print(sku)
+                # print(sku.id)
+                # print(sku.name)
+                # print(sku.price)
+                # print('*'*50)
                 skus.append(sku)
             except GoodsSKU.DoesNotExist as e:
                 print(e)
 
+        # print(skus)
+        # print('-'*50)
         # 定义模板数据
         data = {
             'address':address,

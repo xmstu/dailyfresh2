@@ -161,3 +161,8 @@ SESSION_CACHE_ALIAS = "default"
 
 # login_required装饰器要求login_url,该装饰器根据该url去到login页面
 LOGIN_URL = '/users/login'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+# 使用自定义文件储存类
+DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FdfsStorage'
