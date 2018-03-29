@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% load staticfiles %}
 
 {% block title %}
@@ -10,6 +11,7 @@
     <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/slide.js' %}"></script>
 {% endblock %}
+
 
 {% block body %}
     <div class="navbar_con">
@@ -26,70 +28,85 @@
     </div>
 
     <div class="center_con clearfix">
-    <ul class="subnav fl">
-        {# 商品类别  #}
-        {% for category in categories %}
-            <li><a href="#model0{{ forloop.counter }}" class="{{ category.logo }}">{{ category.name }}</a></li>
-        {% endfor %}
-    </ul>
+        <ul class="subnav fl">
 
+            {# 显示商品类别 #}
+            {% for category in categories %}
+                <li><a href="#model0{{ forloop.counter }}"
+                       class="{{ category.logo }}">{{ category.name }}</a></li>
+            {% endfor %}
+
+        </ul>
         <div class="slide fl">
             <ul class="slide_pics">
-                {# 商品轮播图  #}
-                {% for slide_good in slide_goods %}
-                <li><img src="{{ slide_good.image.url }}" alt="幻灯片"></li>
+
+                {# 显示轮播商品 #}
+                {% for goods in slide_skus %}
+                    <li>
+                    <a href="{% url 'goods:detail' goods.sku.id %}">
+                        <img src="{{ goods.image.url }}" alt="幻灯片"></a>
+                    </li>
                 {% endfor %}
+
+
             </ul>
             <div class="prev"></div>
             <div class="next"></div>
             <ul class="points"></ul>
         </div>
-        {# 商品促销活动 #}
         <div class="adv fl">
+
+            {# 显示促销活动 #}
             {% for promotion in promotions %}
-            <a href="#"><img src="{{ promotion.image.url }}"></a>
+                <a href="#"><img src="{{ promotion.image.url }}"></a>
             {% endfor %}
+
+
         </div>
     </div>
 
 
+    {#  一个类别 #}
     {% for category in categories %}
-    <div class="list_model">
+     <div class="list_model">
         <div class="list_title clearfix">
             <h3 class="fl" id="model01">{{ category.name }}</h3>
             <div class="subtitle fl">
                 <span>|</span>
 
-                {# 一个文字商品 #}
-                {% for c_sku in category.text_skus %}
-                    <a href="#">{{ c_sku.sku.name }}</a>
+                {# 显示文字商品 #}
+                {% for text_sku in category.text_skus %}
+                    <a href="{% url 'goods:detail' text_sku.sku.id %}">{{ text_sku.sku.name }}</a>
                 {% endfor %}
+
             </div>
-            <a href="#" class="goods_more fr" id="fruit_more">查看更多 ></a>
+            <a href="{% url 'goods:list' category.id 1 %}"
+               class="goods_more fr" id="fruit_more">查看更多 ></a>
         </div>
 
         <div class="goods_con clearfix">
             <div class="goods_banner fl"><img src="{{ category.image.url }}"></div>
             <ul class="goods_list fl">
 
-                {# 一个图片商品 #}
-                {% for c_sku in category.img_skus %}
-                <li>
-                    <h4><a href="#">{{ c_sku.sku.name }}</a></h4>
-                    <a href="#"><img src="{{ c_sku.sku.default_image.url }}"></a>
-                    <div class="prize">¥ {{ c_sku.sku.price }}</div>
-                </li>
+                {% for c_sku in category.imgs_skus %}
+                     <li>
+                        <h4><a href="#">{{ c_sku.sku.name }}</a></h4>
+                        <a href="{% url 'goods:detail' c_sku.sku.id %}">
+                            <img src="{{ c_sku.sku.default_image.url }}"></a>
+                        <div class="prize">¥ {{ c_sku.sku.price }}</div>
+                    </li>
                 {% endfor %}
 
             </ul>
         </div>
     </div>
-
     {% endfor %}
+
+
 {% endblock %}
 
 {% block bottom_js %}
-{#    <script type="text/javascript" src="js/slideshow.js"></script>#}
+    <script type="text/javascript" src="js/slideshow.js"></script>
     <script type="text/javascript">
         BCSlideshow('focuspic');
         var oFruit = document.getElementById('fruit_more');
