@@ -19,11 +19,10 @@
                         <li><a href="{% url 'goods:list' category.id 1 %}" class="{{ category.logo }}">{{ category.name }}</a></li>
                     {% endfor %}
 
-
 				</ul>
 			</div>
 			<ul class="navlist fl">
-				<li><a href="">首页</a></li>
+				<li><a href="{% url 'goods:index' %}">首页</a></li>
 				<li class="interval">|</li>
 				<li><a href="">手机生鲜</a></li>
 				<li class="interval">|</li>
@@ -35,7 +34,7 @@
 	<div class="breadcrumb">
 		<a href="#">全部分类</a>
 		<span>></span>
-		<a href="#">新鲜水果</a>
+		<a href="{% url 'goods:list' sku.category.id 1 %}">{{ sku.category.name }}</a>
 		<span>></span>
 		<a href="#">商品详情</a>
 	</div>
@@ -50,17 +49,8 @@
 				<span class="show_pirze">¥<em>{{ sku.price }}</em></span>
 				<span class="show_unit">单  位：{{ sku.unit }}</span>
 			</div>
-			<div class="goods_num clearfix">
-				<div class="num_name fl">数 量：</div>
-				<div class="num_add fl">
-					<input type="text" class="num_show fl" value="1">
-					<a href="javascript:;" class="add fr">+</a>
-					<a href="javascript:;" class="minus fr">-</a>	
-				</div> 
-			</div>
-			<div class="total">总价：<em>16.80元</em></div>
 
-
+            {% if other_skus %}
             {# 显示其它规格的商品 #}
             <div>
                 <ul>
@@ -69,7 +59,17 @@
                     {% endfor %}
                 </ul>
             </div>
+            {% endif %}
 
+			<div class="goods_num clearfix">
+				<div class="num_name fl">数 量：</div>
+				<div class="num_add fl">
+					<input type="text" class="num_show fl" value="1">
+					<a href="javascript:;" class="add fr">+</a>
+					<a href="javascript:;" class="minus fr">-</a>	
+				</div> 
+			</div>
+			<div class="total">总价：<em>{{ sku.price }}</em></div>
 
 			<div class="operate_btn">
 				<a href="javascript:;" class="buy_btn">立即购买</a>
@@ -118,7 +118,7 @@
 {% block bottom_js %}
     <div class="add_jump"></div>
 
-	<script type="text/javascript" src="js/jquery-1.12.2.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript">
 		var $add_x = $('#add_cart').offset().top;
 		var $add_y = $('#add_cart').offset().left;

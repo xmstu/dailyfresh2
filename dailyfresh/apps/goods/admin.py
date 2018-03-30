@@ -12,7 +12,10 @@ class BaseAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         """后台管理员保存对象数据时使用"""
-        super().save_model(request, obj, form, change)
+        # super().save_model(request, obj, form, change)
+        obj.save()
+        # print(obj)
+        # print('='*50)
         # 重新生成首页静态页面
         generate_static_index_html.delay()
         # 删除缓存数据
@@ -20,7 +23,9 @@ class BaseAdmin(admin.ModelAdmin):
 
     def delete_model(self, request, obj):
         """后台管理员删除对象数据时使用"""
-        super().delete_model(self, request)
+        # print(obj, type(obj))
+        # print('-'*50)
+        obj.delete()
         # 重新生成首页静态页面
         generate_static_index_html.delay()
         # 删除缓存数据

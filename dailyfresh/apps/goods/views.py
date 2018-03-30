@@ -6,7 +6,6 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.views.generic import View
 from django_redis import get_redis_connection
-from apps.goods.models import GoodsCategory, IndexSlideGoods, IndexPromotion, IndexCategoryGoods, GoodsSKU
 from celery_tasks.tasks import *
 
 
@@ -15,6 +14,7 @@ class IndexView(View):
     def get(self, request):
         """显示首页"""
 
+        # 每次访问首页url时就生成首页的静态文件
         generate_static_index_html.delay()
         # 读取缓存:
         context = cache.get('index_page_data')
@@ -58,8 +58,6 @@ class IndexView(View):
         else:
             print('首页:使用缓存')
 
-
-
         # 购物车商品数量,经常变化,不能缓存
         cart_count = 0
         # 如果用户登录,就获取购物车数据
@@ -89,6 +87,9 @@ class DetailView(View):
 
     def get(self, request, sku_id):
 
+        # print(sku_id)
+        # print('+'*50)
+
         # 查询数据库中的数据
         # 所有的类别
         categories = GoodsCategory.objects.all()
@@ -106,6 +107,8 @@ class DetailView(View):
 
         # todo:其他规格的商品sku
         other_skus = GoodsSKU.objects.filter(spu=sku.spu).exclude(id=sku_id)
+        print(other_skus)
+        print('='*50)
         # 购物车数量
         # 购物车商品数量,经常变化,不能缓存
         cart_count = 0
@@ -124,12 +127,17 @@ class DetailView(View):
 
             # todo:保存用户浏览的商品记录到redis中
             key = 'history_%s' % request.user.id
-            # 先删除列表中已经存在的商品id
+            # 先删除列表中已经存在的商品id;
+            # 防止这种情况:用户重复点击同一样商品,那么按业务逻辑来说,不应该直接添加该历史记录,应该先删已经存在的商品id的历史记录
             redis_conn.lrem(key, 0, sku_id)
-            # 添加到列表的左侧
-            redis_conn.lpush(key,sku_id)
+            # 删除重复的商品历史记录后,再添加新的历史记录到列表的左侧,确保列表去重
+            redis_conn.lpush(key, sku_id)
             # 最多保存5个商品浏览记录(包含头尾)
             redis_conn.ltrim(key, 0, 4)
+
+        # category_name = sku.category.name
+        # print(category_name)
+        # print('='*50)
 
         # todo:保存用户浏览的商品记录到redis中
         context = {
@@ -171,7 +179,7 @@ class ListView(View):
         # 创建分页对象
         # 参数1：所有数据
         # 参数2：每页显示多少条
-        paginator = Paginator(skus, 2)
+        paginator = Paginator(skus, 5)
         # 页码列表:[1,2,3,4]
         page_range = paginator.page_range
         try:
