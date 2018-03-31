@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
 天天生鲜-商品详情
 {% endblock %}
@@ -69,11 +68,11 @@
 					<a href="javascript:;" class="minus fr">-</a>	
 				</div> 
 			</div>
-			<div class="total">总价：<em>{{ sku.price }}</em></div>
+			<div class="total">总价：<em></em></div>
 
 			<div class="operate_btn">
 				<a href="javascript:;" class="buy_btn">立即购买</a>
-				<a href="javascript:;" class="add_cart" id="add_cart">加入购物车</a>				
+				<a href="javascript:;" class="add_cart" sku_id="{{ sku.id }}" id="add_cart">加入购物车</a>
 			</div>
 		</div>
 	</div>
@@ -117,9 +116,102 @@
 
 {% block bottom_js %}
     <div class="add_jump"></div>
+    {% csrf_token %}
 
-	<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    {% load staticfiles %}
+
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
 	<script type="text/javascript">
+
+        update_goods_amount();
+
+        // todo:更新详情界面商品总价
+        function update_goods_amount() {
+            // 单价
+            var price = $('.show_pirze').children('em').text(),
+                count = $('.num_show').val();
+                price = parseFloat(price);
+                count = parseInt(count);
+            var total_amount = price*count;
+            $('.total').children('em').html(total_amount.toFixed(2) + '元')
+        }
+
+        // todo:加号逻辑
+        $('.add').click(function () {
+            // 商品数量
+           var count = $('.num_show').val();
+           count = parseInt(count);
+           count += 1;
+            // 刷新显示数量
+           $('.num_show').val(count);
+            // 更新总价
+           update_goods_amount();
+        });
+
+        // todo:减号逻辑
+        $('.minus').click(function () {
+            // 商品数量
+           var count = $('.num_show').val();
+           count = parseInt(count);
+           if (count > 1){
+               count -= 1;
+               // 刷新显示数量
+               $('.num_show').val(count);
+            // 更新总价
+               update_goods_amount();
+           }
+        });
+
+        // todo: 手动输入商品数量
+        $('.num_show').blur(function () {
+            // 获取商品数量
+            var count = $('.num_show').val();
+            // 判断商品数量是否合法,
+            // if(不是数字 || 空字符串 || 小于0)
+            if (isNaN(count) || count.trim().length == 0 || parseInt(count) < 0 ){
+                count = 1;
+            }
+            count = parseInt(count);
+            $('.num_show').val(count);
+            update_goods_amount();
+        });
+
+        // 发送post请求,添加商品到购物车
+        $('#add_cart').click(function () {
+            // 商品id和购买数量
+            var sku_id = $(this).attr('sku_id'),
+                count = $('.num_show').val(),
+                token = $('input[name="csrfmiddlewaretoken"]').val();
+            alert(sku_id);
+{#            alert(token);#}
+{#            alert(count);#}
+
+            // 定义post请求参数
+            var params = {
+                'sku_id':sku_id,
+                'count':count,
+                // 键值对:'csrfmiddlewaretoken':token
+                'csrfmiddlewaretoken':token
+            };
+
+            // 发起post请求
+            $.post('/cart/add', params, function (result) {
+                // result: 服务器返回的结果数据
+                if(result.code == 0){
+                    // 添加到购物车成功
+                    alert(result.total_count);
+                    // 更新购物车数字
+                    $('#show_count').text(result.total_count);
+                }
+                else {
+                    // 请求失败
+                    alert(result.errmsg);
+                }
+            })
+
+        });
+
+        {% comment %}
 		var $add_x = $('#add_cart').offset().top;
 		var $add_y = $('#add_cart').offset().left;
 
@@ -138,5 +230,6 @@
 
 			});
 		})
+		{% endcomment %}
 	</script>
 {% endblock %}

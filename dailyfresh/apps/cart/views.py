@@ -23,6 +23,9 @@ class CartAddView(View):
         sku_id = request.POST.get('sku_id')
         count = request.POST.get('count')
 
+        # print(user_id, sku_id, count)
+        # print('+'*50)
+
         # 检验参数all
         if not all([count, sku_id]):
             return JsonResponse({'code':2, 'errmsg':'请填完所有参数'})
@@ -37,12 +40,13 @@ class CartAddView(View):
         # 判断count是否是整数
         try:
             count = int(count)
-        except Exception:
-            return JsonResponse({'code':4, 'errmsg':'购买数量是否整数'})
+        except Exception as e:
+            print(e)
+            return JsonResponse({'code':4, 'errmsg':'购买数量必须为整数'})
 
         # 判断库存
-        # strict_redis = get_redis_connection()
-        strict_redis = StrictRedis()
+        strict_redis = get_redis_connection()
+        # strict_redis = StrictRedis()
         key = 'cart_%s' % user_id
         val = strict_redis.hget(key, sku_id)
         if val:
@@ -58,3 +62,10 @@ class CartAddView(View):
         vals = strict_redis.hvals(key)
         for val in vals:
             total_count += int(val)
+
+        context = {
+            'code':0,
+            'total_count':total_count,
+        }
+
+        return JsonResponse(context)

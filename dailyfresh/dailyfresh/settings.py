@@ -97,7 +97,7 @@ DATABASES = {
 
         # 配置mysql数据库
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "DailyFresh",
+        'NAME': "db_dailyfresh",
         'USER': "root",
         'PASSWORD': "mysql",
         'HOST': "localhost",

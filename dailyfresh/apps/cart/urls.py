@@ -19,5 +19,5 @@ from django.contrib import admin
 from apps.cart.views import CartAddView
 
 urlpatterns = [
-    url(r'^add/', CartAddView.as_view(), name='add')
+    url(r'^add', CartAddView.as_view(), name='add')
 ]
