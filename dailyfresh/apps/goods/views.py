@@ -7,9 +7,10 @@ from django.shortcuts import render, redirect
 from django.views.generic import View
 from django_redis import get_redis_connection
 from celery_tasks.tasks import *
+from utils.common import BaseCartView
 
 
-class IndexView(View):
+class IndexView(BaseCartView):
 
     def get(self, request):
         """显示首页"""
@@ -58,31 +59,17 @@ class IndexView(View):
         else:
             print('首页:使用缓存')
 
-        # 购物车商品数量,经常变化,不能缓存
-        cart_count = 0
-        # 如果用户登录,就获取购物车数据
-        if request.user.is_authenticated():
-            # 创建redis_conn对象
-            redis_conn = get_redis_connection('default')
-            # 获取用户id
-            user_id = request.user.id
-            key = 'cart_%s' % user_id
-            # 从redis中获取购物车数据,返回字典
-            cart_dict = redis_conn.hgetall(key)
-            # 遍历购物车字典的值,累加购物车的值
-            for value in cart_dict.values():
-                cart_count += int(value)
-
+        cart_count = super().get_cart_count(request)
         # print(cart_count)
 
-        # 更新添加cart_count的值
+        # 更新context字典添加cart_count的值
         context.update(cart_count=cart_count)
 
         # 响应请求,显示模板
         return render(request, 'index.html', context)
 
 
-class DetailView(View):
+class DetailView(BaseCartView):
     """商品详情界面"""
 
     def get(self, request, sku_id):
@@ -107,33 +94,22 @@ class DetailView(View):
 
         # todo:其他规格的商品sku
         other_skus = GoodsSKU.objects.filter(spu=sku.spu).exclude(id=sku_id)
-        print(other_skus)
-        print('='*50)
-        # 购物车数量
-        # 购物车商品数量,经常变化,不能缓存
-        cart_count = 0
-        # 如果用户登录,就获取购物车数据
-        if request.user.is_authenticated():
-            # 创建redis_conn对象
-            redis_conn = get_redis_connection('default')
-            # 获取用户id
-            user_id = request.user.id
-            key = 'cart_%s' % user_id
-            # 从redis中获取购物车数据,返回字典
-            cart_dict = redis_conn.hgetall(key)
-            # 遍历购物车字典的值,累加购物车的值
-            for value in cart_dict.values():
-                cart_count += int(value)
+        # print(other_skus)
+        # print('='*50)
 
-            # todo:保存用户浏览的商品记录到redis中
-            key = 'history_%s' % request.user.id
-            # 先删除列表中已经存在的商品id;
-            # 防止这种情况:用户重复点击同一样商品,那么按业务逻辑来说,不应该直接添加该历史记录,应该先删已经存在的商品id的历史记录
-            redis_conn.lrem(key, 0, sku_id)
-            # 删除重复的商品历史记录后,再添加新的历史记录到列表的左侧,确保列表去重
-            redis_conn.lpush(key, sku_id)
-            # 最多保存5个商品浏览记录(包含头尾)
-            redis_conn.ltrim(key, 0, 4)
+        # 通过BaseCartView的get_cart_count方法获取cart_count数量
+        cart_count = super().get_cart_count(request)
+
+        # todo:保存用户浏览的商品记录到redis中
+        strict_redis = get_redis_connection('default')
+        key = 'history_%s' % request.user.id
+        # 先删除列表中已经存在的商品id;
+        # 防止这种情况:用户重复点击同一样商品,那么按业务逻辑来说,不应该直接添加该历史记录,应该先删已经存在的商品id的历史记录
+        strict_redis.lrem(key, 0, sku_id)
+        # 删除重复的商品历史记录后,再添加新的历史记录到列表的左侧,确保列表去重
+        strict_redis.lpush(key, sku_id)
+        # 最多保存5个商品浏览记录(包含头尾)
+        strict_redis.ltrim(key, 0, 4)
 
         # category_name = sku.category.name
         # print(category_name)
@@ -151,7 +127,7 @@ class DetailView(View):
         return render(request, 'detail.html', context)
 
 
-class ListView(View):
+class ListView(BaseCartView):
     """商品列表界面"""
 
     def get(self, request, category_id, page_num):
@@ -191,21 +167,9 @@ class ListView(View):
         new_skus = GoodsSKU.objects.filter(category=category)\
                     .order_by('-create_time')[0:2]
 
-        # 购物车数量
-        # 购物车商品数量,经常变化,不能缓存
-        cart_count = 0
-        # 如果用户登录,就获取购物车数据
-        if request.user.is_authenticated():
-            # 创建redis_conn对象
-            redis_conn = get_redis_connection('default')
-            # 获取用户id
-            user_id = request.user.id
-            key = 'cart_%s' % user_id
-            # 从redis中获取购物车数据,返回字典
-            cart_dict = redis_conn.hgetall(key)
-            # 遍历购物车字典的值,累加购物车的值
-            for value in cart_dict.values():
-                cart_count += int(value)
+        # 获取购物车商品数量
+        cart_count = super().get_cart_count(request)
+
         # 分页数据
 
         context = {
