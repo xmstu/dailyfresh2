@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^active/(?P<token>.+)$', views.ActiveView.as_view(), name='active'),#激活
 
     url(r'^address$', views.UserAddressView.as_view(),name='address'),
-    url(r'^order$', views.UserOrderView.as_view(),name='order'),
+    url(r'^orders/(?P<page_num>\d+)$', views.UserOrderView.as_view(),name='orders'),
     url(r'^$', views.UserInfoView.as_view(),name='info'),
 ]

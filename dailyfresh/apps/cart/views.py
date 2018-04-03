@@ -7,45 +7,26 @@ from django_redis import get_redis_connection
 from redis import StrictRedis
 
 from apps.goods.models import GoodsSKU
-from utils.common import LoginRequiredViewMixin
+from utils.common import LoginRequiredViewMixin, BaseCartView
 
 
-class CartAddView(View):
+class CartAddView(BaseCartView):
 
-    def post(self, request):
+    def post(self, request, command='add'):
         """添加商品到购物车"""
 
-        # 判断用户是否登录
-        if not request.user.is_authenticated():
-            return JsonResponse({'code':1, 'errmsg':'请先登录'})
+        params = super().post(request, command)
 
         # 接受数据:user_id,sku_id,count
-        user_id = request.user.id
-        sku_id = request.POST.get('sku_id')
-        count = request.POST.get('count')
+        user_id, sku_id, count, sku = params['user_id'], \
+                                 params['sku_id'], \
+                                 params['count'], \
+                                 params['sku']
 
         # print(user_id, sku_id, count)
         # print('+'*50)
 
-        # 检验参数all
-        if not all([count, sku_id]):
-            return JsonResponse({'code':2, 'errmsg':'请填完所有参数'})
-
-        # 判断商品是否存在
-        try:
-            sku = GoodsSKU.objects.get(id=sku_id)
-        except GoodsSKU.DoesNotExist as e:
-            print(e)
-            return JsonResponse({'code':3,'errmsg':'商品不存在'})
-
-        # 判断count是否是整数
-        try:
-            count = int(count)
-        except Exception as e:
-            print(e)
-            return JsonResponse({'code':4, 'errmsg':'购买数量必须为整数'})
-
-        # 判断库存
+        # 添加商品到购物车,如果redis中已有该商品的id,那么就增加它的数量
         strict_redis = get_redis_connection()
         # strict_redis = StrictRedis()
         key = 'cart_%s' % user_id
@@ -56,6 +37,7 @@ class CartAddView(View):
         # 库存逻辑判断
         if count > sku.stock:
             return JsonResponse({'code':5, 'errmsg':'库存不足'})
+
         # 操作redis数据库存储商品到购物车
         strict_redis.hset(key, sku_id, count)
 
@@ -117,39 +99,21 @@ class CartInfoView(LoginRequiredViewMixin, View):
         return render(request, 'cart.html', context)
 
 
-class CartUpdateView(LoginRequiredViewMixin, View):
+class CartUpdateView(LoginRequiredViewMixin, BaseCartView):
 
-    def post(self, request):
+    def post(self, request, command='update'):
         """修改购物车商品数量"""
 
-        # 判断登录状态
-        if not request.user.is_authenticated():
-            return JsonResponse({'code':1, 'errmsg':'请先登录'})
+        # print(CartUpdateView.mro())
+        # print('-' * 50)
 
-        # 获取请求参数
-        sku_id = request.POST.get('sku_id')
-        count = request.POST.get('count')
+        params = super().post(request, command)
+        sku_id = params['sku_id']
+        count = params['count']
 
-        # 参数合法性判断
-        if not all([sku_id, count]):
-            return JsonResponse({'code':2, 'errmsg':'参数不能为空'})
-
-        # 查询数据库获取sku对象
-        try:
-            sku = GoodsSKU.objects.get(id=sku_id)
-        except GoodsSKU.DoesNotExist:
-            return JsonResponse({'code':3, 'errmsg':'商品不存在'})
-
-        # 判断购物数量是否为整数
-        try:
-            count = int(count)
-        except Exception as e:
-            print(e)
-            return JsonResponse({'code':4, 'errmsg':'购买数量需要为整数'})
-
-        # 库存判断
-        if count > sku.stock:
-            return JsonResponse({'code': 5, 'errmsg': '库存不足'})
+        # print(sku_id)
+        # print(count)
+        # print('-' * 50)
 
         # todo:业务处理：保存购物车商品数量
         strict_redis = get_redis_connection()
@@ -160,23 +124,13 @@ class CartUpdateView(LoginRequiredViewMixin, View):
         return JsonResponse({'code': 0, 'message': '修改商品数量成功',})
 
 
-class CartDeleteView(LoginRequiredViewMixin, View):
+class CartDeleteView(LoginRequiredViewMixin, BaseCartView):
 
-    def post(self, request):
+    def post(self, request, command='delete'):
         """删除购物车中的商品"""
 
-        # 判断是否有登录
-        if not request.user.is_authenticated():
-            return JsonResponse({'code':1, 'errmsg':'请先登录'})
-
         # 获取请求参数:sku_id
-        sku_id = request.POST.get('sku_id')
-
-        # 查询数据库获取sku对象,如果获取不到sku对象,那么就返回错误码
-        try:
-            sku = GoodsSKU.objects.get(id=sku_id)
-        except GoodsSKU.DoesNotExist:
-            return JsonResponse({'code': 3, 'errmsg': '商品不存在'})
+        sku_id = super().post(request, command)['sku_id']
 
         # 业务处理:从redis中删除商品
         strict_redis = get_redis_connection()

@@ -2,6 +2,7 @@ import re
 
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
+from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
 from django.db import IntegrityError
 from django.http import HttpResponse
@@ -10,6 +11,7 @@ from django_redis import get_redis_connection
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer, SignatureExpired
 
 from apps.goods.models import GoodsSKU
+from apps.orders.models import OrderInfo, OrderGoods
 from celery_tasks.tasks import send_active_email
 # Create your views here.
 from django.views.generic import View
@@ -246,9 +248,63 @@ class UserOrderView(LoginRequiredViewMixin, View):
     """用户中心--订单显示界面"""
 
     # /users/order
-    def get(self, request):
-        data = {'which_page': 2}
-        return render(request, 'user_center_order.html', data)
+    def get(self, request, page_num):
+        """显示订单列表界面"""
+
+        '''
+        orders: 某个用户的所有订单
+            order: 第1个订单对象
+                total_pay: 实付金额
+                status_desc: 订单状态名称
+                order_skus: 订单中所有的商品
+                    order_sku: 第1个订单商品
+                        sku_amount: 小计金额
+                    order_sku: 第2个订单商品
+                        sku_amount: 小计金额
+            order: 第2个订单对象
+        '''
+        user = request.user
+        # 查询当前用户所有订单
+        orders = OrderInfo.objects.filter(user=request.user).order_by('-create_time')
+
+        for order in orders:
+            # 查询某一个订单下所有的订单商品
+            order_skus = OrderGoods.objects.filter(order=order)
+            # 1 -> 待支付
+            order_desc = OrderInfo.ORDER_STATUS.get(order.status)
+            # 订单总金额
+            total_amount = 0
+
+            for sku in order_skus:
+                # 计算商品的小计金额
+                sku_amount = sku.price * sku.count
+                # 动态地给订单商品列表下的每个商品实例对象都添加小计金额属性
+                sku.sku_amount = sku_amount
+                total_amount += sku_amount
+
+            # 动态地新增属性:订单商品
+            order.skus = order_skus
+            order.order_desc = order_desc
+            order.total_pay = total_amount + order.trans_cost
+
+        print()
+        # 创建分页,每页显示两个订单
+        paginator = Paginator(orders, 2)
+        # page对象
+        try:
+            page = paginator.page(page_num)
+        except Exception:
+            # 默认显示第一页
+            page = paginator.page(1)
+
+        # 页码列表:[1, 2]
+        page_list = paginator.page_range
+        context = {
+            'which_page': 1,
+            'page':page,
+            'page_list':page_list
+        }
+        return render(request, 'user_center_order.html', context)
 
 
 class UserInfoView(LoginRequiredViewMixin, View):

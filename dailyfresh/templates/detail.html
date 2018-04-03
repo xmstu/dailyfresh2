@@ -176,8 +176,21 @@
             update_goods_amount();
         });
 
+        // todo: 添加商品到购物车时的动画效果
+         // 动画平移的开始位置
+         var $add_x = $('#add_cart').offset().top;
+         var $add_y = $('#add_cart').offset().left;
+
+         // 动画平移的结束位置
+         var $to_x = $('#show_count').offset().top;
+         var $to_y = $('#show_count').offset().left;
+
+
         // 发送post请求,添加商品到购物车
         $('#add_cart').click(function () {
+            // 设置div小红点平移的开始位置
+            $(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'});
+
             // 商品id和购买数量
             var sku_id = $(this).attr('sku_id'),
                 count = $('.num_show').val(),
@@ -198,10 +211,16 @@
             $.post('/cart/add', params, function (result) {
                 // result: 服务器返回的结果数据
                 if(result.code == 0){
-                    // 添加到购物车成功
-                    alert(result.total_count);
-                    // 更新购物车数字
-                    $('#show_count').text(result.total_count);
+                    // 添加商品到购物车成功, 执行平移动画
+                     $(".add_jump").stop().animate({
+                         // div小红点平移的终点位置
+                         'left': $to_y+7,
+                         'top': $to_x+7},
+                         "fast", function() {
+                             $(".add_jump").fadeOut('fast',function(){
+                                 $('#show_count').html(result.cart_count);
+                             });
+                     });
                 }
                 else {
                     // 请求失败
@@ -210,26 +229,5 @@
             })
 
         });
-
-        {% comment %}
-		var $add_x = $('#add_cart').offset().top;
-		var $add_y = $('#add_cart').offset().left;
-
-		var $to_x = $('#show_count').offset().top;
-		var $to_y = $('#show_count').offset().left;
-
-		$(".add_jump").css({'left':$add_y+80,'top':$add_x+10,'display':'block'})
-		$('#add_cart').click(function(){
-			$(".add_jump").stop().animate({
-				'left': $to_y+7,
-				'top': $to_x+7},
-				"fast", function() {
-					$(".add_jump").fadeOut('fast',function(){
-						$('#show_count').html(2);
-					});
-
-			});
-		})
-		{% endcomment %}
 	</script>
 {% endblock %}
