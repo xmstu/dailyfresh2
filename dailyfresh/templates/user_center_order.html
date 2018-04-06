@@ -26,7 +26,9 @@
                 </td>
                 <td width="15%">{{ order.total_pay }}元</td>
                 <td width="15%">{{ order.order_desc }}</td>
-                <td width="15%"><a href="#" class="oper_btn">去付款</a></td>
+                <td width="15%"><a href="#" class="oper_btn"
+                                   status="{{ order.status }}"
+                                   order_id="{{ order.order_id }}">{{ order.order_desc }}</a></td>
             </tr>
             </tbody>
         </table>
@@ -50,4 +52,58 @@
             {% endif %}
         </div>
     </div>
+{% endblock %}
+
+{% block bottom_js %}
+    {% load staticfiles %}
+    {% csrf_token %}
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script>
+
+        // 获取订单状态,再刷新订单操作按钮显示的文本
+        var status = $('.oper_btn').attr('status');
+        if (status == 1){
+            $('.oper_btn').next('去付款');
+        } else if (status == 4){
+            $('.oper_btn').next('去评论');
+        } else if (status == 5){
+            $('.oper_btn').next('已完成');
+        }
+
+        // 点击去付款
+        $('.oper_btn').click(function () {
+            var order_id = $(this).attr('order_id'),
+                status = $(this).attr('status'),
+                csrf = $('input[name=csrfmiddlewaretoken]').val();
+            // alert(order_id + ':' + status + ' ' + csrf);
+            if(status == 1){  // 未支付
+                // post请求参数
+                var params = {
+                    'order_id':order_id,
+                    'csrfmiddlewaretoken':csrf
+                };
+{#                alert('ok');#}
+                $.post('/orders/pay', params, function (result) {
+{#                    location.href = result.pay_url;#}
+                    // 新开一个窗口,打开链接(支付引导)
+{#                    alert('ok');#}
+{#                    alert(result.pay_url);#}
+                    window.open(result.pay_url);
+                    // 查询支付结果
+                    $.post('/orders/check', params, function (result) {
+                        if(result.code == 0){
+                            // 支付成功,重新加载html界面
+                            window.location.reload();
+                        } else {
+                            alert(result.message);
+                        }
+                    })
+                })
+            } else if (status == 4){
+{#                alert('/orders/comment/' + order_id);#}
+                window.location.href = '/orders/comment/' + order_id;
+            }
+        })
+
+    </script>
 {% endblock %}

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@*4*1!t9hr8a()n_=es3^6l#0=4(47)_&+k#n9dp@-1@1+lldi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -180,3 +180,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 # 使用自定义文件储存类
 DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FdfsStorage'
+
+# 收集静态文件目录
+STATIC_ROOT = '/home/python/Desktop/static'

@@ -1,0 +1,6124 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 15:31:28 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8080 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:38769 (port auto-assigned) fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0x1b01710
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1b01710 pid: 58487 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 58487)
+spawned uWSGI worker 1 (pid: 58491, cores: 2)
+spawned uWSGI worker 2 (pid: 58492, cores: 2)
+spawned uWSGI worker 3 (pid: 58493, cores: 2)
+spawned uWSGI worker 4 (pid: 58496, cores: 2)
+spawned uWSGI http 1 (pid: 58497)
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 699 bytes} [Wed Apr  4 15:32:08 2018] GET / => generated 19282 bytes in 458 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 3/2] 127.0.0.1 () {38 vars in 686 bytes} [Wed Apr  4 15:32:08 2018] GET /static/css/reset.css => generated 94 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 684 bytes} [Wed Apr  4 15:32:08 2018] GET /static/css/main.css => generated 93 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 2/4] 127.0.0.1 () {38 vars in 691 bytes} [Wed Apr  4 15:32:08 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 259 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 2/5] 127.0.0.1 () {38 vars in 700 bytes} [Wed Apr  4 15:32:08 2018] GET /static/images/logo.png => generated 96 bytes in 254 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 1/6] 127.0.0.1 () {38 vars in 659 bytes} [Wed Apr  4 15:32:08 2018] GET /js/slideshow.js => generated 89 bytes in 277 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 2/7] 127.0.0.1 () {38 vars in 667 bytes} [Wed Apr  4 15:32:08 2018] GET /static/js/slide.js => generated 92 bytes in 284 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 2/8] 127.0.0.1 () {38 vars in 683 bytes} [Wed Apr  4 15:32:08 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 288 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 4/9] 127.0.0.1 () {38 vars in 699 bytes} [Wed Apr  4 15:32:08 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 5/10] 127.0.0.1 () {38 vars in 652 bytes} [Wed Apr  4 15:32:08 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 6/11] 127.0.0.1 () {40 vars in 729 bytes} [Wed Apr  4 15:32:11 2018] GET / => generated 19282 bytes in 160 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 8/12] 127.0.0.1 () {38 vars in 690 bytes} [Wed Apr  4 15:32:11 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 8/13] 127.0.0.1 () {38 vars in 685 bytes} [Wed Apr  4 15:32:11 2018] GET /static/css/reset.css => generated 94 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 3/14] 127.0.0.1 () {38 vars in 683 bytes} [Wed Apr  4 15:32:11 2018] GET /static/css/main.css => generated 93 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 3/15] 127.0.0.1 () {38 vars in 682 bytes} [Wed Apr  4 15:32:11 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 4/16] 127.0.0.1 () {38 vars in 666 bytes} [Wed Apr  4 15:32:11 2018] GET /static/js/slide.js => generated 92 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 4/17] 127.0.0.1 () {38 vars in 700 bytes} [Wed Apr  4 15:32:11 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 4/18] 127.0.0.1 () {38 vars in 661 bytes} [Wed Apr  4 15:32:11 2018] GET /js/slideshow.js => generated 89 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 58496|app: 0|req: 5/19] 127.0.0.1 () {40 vars in 730 bytes} [Wed Apr  4 15:53:37 2018] GET / => generated 19282 bytes in 335 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 6/20] 127.0.0.1 () {40 vars in 717 bytes} [Wed Apr  4 15:53:38 2018] GET /static/css/reset.css => generated 94 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 7/21] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:53:38 2018] GET /static/images/logo.png => generated 96 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 4/22] 127.0.0.1 () {40 vars in 722 bytes} [Wed Apr  4 15:53:38 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 4/23] 127.0.0.1 () {40 vars in 714 bytes} [Wed Apr  4 15:53:38 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 6/24] 127.0.0.1 () {40 vars in 715 bytes} [Wed Apr  4 15:53:38 2018] GET /static/css/main.css => generated 93 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 6/25] 127.0.0.1 () {40 vars in 698 bytes} [Wed Apr  4 15:53:38 2018] GET /static/js/slide.js => generated 92 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 8/26] 127.0.0.1 () {40 vars in 692 bytes} [Wed Apr  4 15:53:38 2018] GET /js/slideshow.js => generated 89 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 9/27] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:53:38 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 9/28] 127.0.0.1 () {40 vars in 730 bytes} [Wed Apr  4 15:53:39 2018] GET / => generated 19282 bytes in 134 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 11/29] 127.0.0.1 () {40 vars in 715 bytes} [Wed Apr  4 15:53:39 2018] GET /static/css/main.css => generated 93 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 11/30] 127.0.0.1 () {40 vars in 717 bytes} [Wed Apr  4 15:53:39 2018] GET /static/css/reset.css => generated 94 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 13/31] 127.0.0.1 () {40 vars in 722 bytes} [Wed Apr  4 15:53:39 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 13/32] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:53:39 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 11/33] 127.0.0.1 () {40 vars in 714 bytes} [Wed Apr  4 15:53:39 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 11/34] 127.0.0.1 () {40 vars in 698 bytes} [Wed Apr  4 15:53:39 2018] GET /static/js/slide.js => generated 92 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 14/35] 127.0.0.1 () {40 vars in 692 bytes} [Wed Apr  4 15:53:39 2018] GET /js/slideshow.js => generated 89 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 12/36] 127.0.0.1 () {38 vars in 697 bytes} [Wed Apr  4 15:54:20 2018] GET / => generated 19282 bytes in 139 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 5/37] 127.0.0.1 () {38 vars in 684 bytes} [Wed Apr  4 15:54:21 2018] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 7/38] 127.0.0.1 () {38 vars in 699 bytes} [Wed Apr  4 15:54:21 2018] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 16/39] 127.0.0.1 () {38 vars in 682 bytes} [Wed Apr  4 15:54:21 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 16/40] 127.0.0.1 () {38 vars in 666 bytes} [Wed Apr  4 15:54:21 2018] GET /static/js/slide.js => generated 92 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 7/41] 127.0.0.1 () {38 vars in 683 bytes} [Wed Apr  4 15:54:21 2018] GET /static/css/main.css => generated 93 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 7/42] 127.0.0.1 () {38 vars in 690 bytes} [Wed Apr  4 15:54:21 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 13/43] 127.0.0.1 () {38 vars in 660 bytes} [Wed Apr  4 15:54:21 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 14/44] 127.0.0.1 () {38 vars in 699 bytes} [Wed Apr  4 15:54:21 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 15/45] 127.0.0.1 () {40 vars in 730 bytes} [Wed Apr  4 15:54:58 2018] GET / => generated 19282 bytes in 134 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 8/47] 127.0.0.1 () {40 vars in 698 bytes} [Wed Apr  4 15:54:58 2018] GET /static/js/slide.js => generated 92 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 8/47] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:54:58 2018] GET /static/images/logo.png => generated 96 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 17/48] 127.0.0.1 () {40 vars in 715 bytes} [Wed Apr  4 15:54:58 2018] GET /static/css/main.css => generated 93 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 18/49] 127.0.0.1 () {40 vars in 722 bytes} [Wed Apr  4 15:54:58 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 18/50] 127.0.0.1 () {40 vars in 714 bytes} [Wed Apr  4 15:54:58 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58493|app: 0|req: 17/51] 127.0.0.1 () {40 vars in 717 bytes} [Wed Apr  4 15:54:58 2018] GET /static/css/reset.css => generated 94 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 9/52] 127.0.0.1 () {40 vars in 692 bytes} [Wed Apr  4 15:54:58 2018] GET /js/slideshow.js => generated 89 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 19/53] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:54:58 2018] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 58491|app: 0|req: 9/54] 127.0.0.1 () {40 vars in 730 bytes} [Wed Apr  4 15:57:28 2018] GET / => generated 19282 bytes in 245 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 11/55] 127.0.0.1 () {40 vars in 717 bytes} [Wed Apr  4 15:57:28 2018] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 11/56] 127.0.0.1 () {40 vars in 715 bytes} [Wed Apr  4 15:57:28 2018] GET /static/css/main.css => generated 93 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 11/57] 127.0.0.1 () {40 vars in 722 bytes} [Wed Apr  4 15:57:28 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 18/59] 127.0.0.1 () {40 vars in 698 bytes} [Wed Apr  4 15:57:28 2018] GET /static/js/slide.js => generated 92 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 11/59] 127.0.0.1 () {40 vars in 714 bytes} [Wed Apr  4 15:57:28 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 19/60] 127.0.0.1 () {40 vars in 731 bytes} [Wed Apr  4 15:57:28 2018] GET /static/images/logo.png => generated 96 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 12/61] 127.0.0.1 () {40 vars in 692 bytes} [Wed Apr  4 15:57:28 2018] GET /js/slideshow.js => generated 89 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 58492|app: 0|req: 13/62] 127.0.0.1 () {40 vars in 728 bytes} [Wed Apr  4 15:57:32 2018] GET / => generated 19282 bytes in 260 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 12/63] 127.0.0.1 () {40 vars in 715 bytes} [Wed Apr  4 15:57:32 2018] GET /static/css/reset.css => generated 94 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 13/64] 127.0.0.1 () {40 vars in 714 bytes} [Wed Apr  4 15:57:32 2018] GET /static/css/main.css => generated 93 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 15/65] 127.0.0.1 () {40 vars in 721 bytes} [Wed Apr  4 15:57:32 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 15/66] 127.0.0.1 () {40 vars in 713 bytes} [Wed Apr  4 15:57:32 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 21/67] 127.0.0.1 () {40 vars in 730 bytes} [Wed Apr  4 15:57:32 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 21/68] 127.0.0.1 () {40 vars in 697 bytes} [Wed Apr  4 15:57:32 2018] GET /static/js/slide.js => generated 92 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 22/69] 127.0.0.1 () {40 vars in 691 bytes} [Wed Apr  4 15:57:32 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 58496|app: 0|req: 23/70] 127.0.0.1 () {38 vars in 699 bytes} [Wed Apr  4 15:58:50 2018] GET / => generated 19282 bytes in 145 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 24/71] 127.0.0.1 () {38 vars in 686 bytes} [Wed Apr  4 15:58:50 2018] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58492|app: 0|req: 14/72] 127.0.0.1 () {38 vars in 691 bytes} [Wed Apr  4 15:58:50 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58496|app: 0|req: 26/73] 127.0.0.1 () {38 vars in 683 bytes} [Wed Apr  4 15:58:50 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 26/74] 127.0.0.1 () {38 vars in 684 bytes} [Wed Apr  4 15:58:50 2018] GET /static/css/main.css => generated 93 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 15/75] 127.0.0.1 () {38 vars in 700 bytes} [Wed Apr  4 15:58:50 2018] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58491|app: 0|req: 17/76] 127.0.0.1 () {38 vars in 667 bytes} [Wed Apr  4 15:58:50 2018] GET /static/js/slide.js => generated 92 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 17/77] 127.0.0.1 () {38 vars in 661 bytes} [Wed Apr  4 15:58:50 2018] GET /js/slideshow.js => generated 89 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58496|app: 0|req: 27/78] 127.0.0.1 () {38 vars in 700 bytes} [Wed Apr  4 15:58:50 2018] GET /static/images/logo.png => generated 96 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:05:57 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:06:01 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on 127.0.0.1:8081 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41835 (port auto-assigned) fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0xdf5710
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xdf5710 pid: 59186 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 59186)
+spawned uWSGI worker 1 (pid: 59203, cores: 2)
+spawned uWSGI worker 2 (pid: 59204, cores: 2)
+spawned uWSGI worker 3 (pid: 59205, cores: 2)
+spawned uWSGI worker 4 (pid: 59208, cores: 2)
+spawned uWSGI http 1 (pid: 59210)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:07:59 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:08:00 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8081).
+bind(): Address already in use [core/socket.c line 769]
+没有缓存数据,从mysql中读取
+[pid: 58493|app: 0|req: 20/79] 127.0.0.1 () {38 vars in 709 bytes} [Wed Apr  4 16:09:47 2018] GET /index => generated 19282 bytes in 133 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 17/80] 127.0.0.1 () {38 vars in 691 bytes} [Wed Apr  4 16:09:47 2018] GET /static/css/reset.css => generated 94 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58492|app: 0|req: 17/81] 127.0.0.1 () {38 vars in 696 bytes} [Wed Apr  4 16:09:47 2018] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 22/82] 127.0.0.1 () {38 vars in 689 bytes} [Wed Apr  4 16:09:47 2018] GET /static/css/main.css => generated 93 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 22/83] 127.0.0.1 () {38 vars in 688 bytes} [Wed Apr  4 16:09:47 2018] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 19/84] 127.0.0.1 () {38 vars in 672 bytes} [Wed Apr  4 16:09:47 2018] GET /static/js/slide.js => generated 92 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 58491|app: 0|req: 19/85] 127.0.0.1 () {38 vars in 705 bytes} [Wed Apr  4 16:09:47 2018] GET /static/images/logo.png => generated 96 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 58493|app: 0|req: 23/86] 127.0.0.1 () {38 vars in 666 bytes} [Wed Apr  4 16:09:47 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:11:06 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0xc445f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xc445f0 pid: 59304 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 59304)
+spawned uWSGI worker 1 (pid: 59308, cores: 2)
+spawned uWSGI worker 2 (pid: 59309, cores: 2)
+spawned uWSGI worker 3 (pid: 59310, cores: 2)
+spawned uWSGI worker 4 (pid: 59312, cores: 2)
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Apr  4 16:11:09 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8081 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0x101c5f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x101c5f0 pid: 59318 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 59318)
+spawned uWSGI worker 1 (pid: 59326, cores: 2)
+spawned uWSGI worker 2 (pid: 59327, cores: 2)
+spawned uWSGI worker 3 (pid: 59328, cores: 2)
+spawned uWSGI worker 4 (pid: 59330, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+没有缓存数据,从mysql中读取
+[pid: 59309|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 742 bytes} [Wed Apr  4 16:12:19 2018] GET /index => generated 19282 bytes in 363 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 59327|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 694 bytes} [Wed Apr  4 16:12:19 2018] GET /js/slideshow.js => generated 89 bytes in 163 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 1/2] 127.0.0.1 () {40 vars in 699 bytes} [Wed Apr  4 16:12:29 2018] GET /js/slideshow.js => generated 89 bytes in 142 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 1/2] 127.0.0.1 () {40 vars in 689 bytes} [Wed Apr  4 16:12:34 2018] GET /js/slideshow.js => generated 89 bytes in 157 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 2/3] 127.0.0.1 () {42 vars in 781 bytes} [Wed Apr  4 16:12:38 2018] GET /detail/1 => generated 10793 bytes in 101 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 781 bytes} [Wed Apr  4 16:12:43 2018] GET /detail/3 => generated 10178 bytes in 240 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 1/4] 127.0.0.1 () {42 vars in 781 bytes} [Wed Apr  4 16:12:52 2018] GET /detail/3 => generated 10178 bytes in 266 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 59330|app: 0|req: 2/4] 127.0.0.1 () {42 vars in 783 bytes} [Wed Apr  4 16:14:19 2018] GET /index => generated 19282 bytes in 180 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 3/5] 127.0.0.1 () {40 vars in 694 bytes} [Wed Apr  4 16:14:19 2018] GET /js/slideshow.js => generated 89 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 59330|app: 0|req: 3/5] 127.0.0.1 () {42 vars in 780 bytes} [Wed Apr  4 16:14:23 2018] GET /index => generated 19282 bytes in 143 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 2/6] 127.0.0.1 () {40 vars in 694 bytes} [Wed Apr  4 16:14:23 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[b'3', b'1', b'29', b'5', b'17']
+[pid: 59328|app: 0|req: 2/6] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 10:01:41 2018] GET /users/ => generated 6612 bytes in 2509 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+
+[pid: 59310|app: 0|req: 3/7] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 10:01:46 2018] GET /users/orders/1 => generated 7267 bytes in 1426 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59330|app: 0|req: 4/7] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 10:01:56 2018] GET /users/orders/2 => generated 8181 bytes in 1158 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59310|app: 0|req: 4/8] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 10:01:59 2018] GET /users/orders/3 => generated 7797 bytes in 234 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 5/8] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 10:02:01 2018] GET /users/address => generated 4477 bytes in 200 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59312|app: 0|req: 4/9] 127.0.0.1 () {42 vars in 806 bytes} [Fri Apr  6 10:02:02 2018] GET /users/orders/1 => generated 7267 bytes in 531 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59328|app: 0|req: 3/9] 127.0.0.1 () {44 vars in 837 bytes} [Fri Apr  6 10:45:58 2018] GET /users/orders/1 => generated 7661 bytes in 271 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 5/10] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 10:46:01 2018] POST /orders/pay => generated 27 bytes in 1081 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 6/10] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 10:46:03 2018] POST /orders/pay => generated 27 bytes in 923 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 5/11] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 10:46:19 2018] POST /orders/pay => generated 27 bytes in 884 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59330|app: 0|req: 7/11] 127.0.0.1 () {44 vars in 837 bytes} [Fri Apr  6 10:56:52 2018] GET /users/orders/1 => generated 7661 bytes in 176 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 6/12] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 10:56:55 2018] POST /orders/pay => generated 27 bytes in 81 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+[pid: 59327|app: 0|req: 2/12] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 10:57:07 2018] POST /orders/pay => generated 27 bytes in 1008 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59312|app: 0|req: 7/13] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 10:57:11 2018] GET /users/orders/2 => generated 8575 bytes in 199 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59326|app: 0|req: 1/13] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 10:57:14 2018] GET /users/orders/1 => generated 7661 bytes in 816 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 8/14] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:03:56 2018] POST /orders/pay => generated 27 bytes in 69 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59328|app: 0|req: 4/14] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:04:56 2018] GET /users/orders/1 => generated 7661 bytes in 227 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 9/15] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:05:01 2018] POST /orders/pay => generated 27 bytes in 54 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59330|app: 0|req: 8/15] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:08:53 2018] GET /users/orders/1 => generated 7704 bytes in 179 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59308|app: 0|req: 1/16] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:08:57 2018] POST /orders/pay => generated 27 bytes in 1143 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 9/16] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:09:40 2018] POST /orders/pay => generated 27 bytes in 51 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59310|app: 0|req: 6/17] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:11:10 2018] GET /users/orders/1 => generated 7704 bytes in 155 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59327|app: 0|req: 3/17] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:11:13 2018] POST /orders/pay => generated 27 bytes in 60 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59312|app: 0|req: 10/18] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:12:16 2018] GET /users/orders/1 => generated 7704 bytes in 113 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59327|app: 0|req: 4/18] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 11:12:18 2018] GET /users/orders/2 => generated 8618 bytes in 405 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 11/19] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:12:20 2018] POST /orders/pay => generated 27 bytes in 38 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59330|app: 0|req: 10/19] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:14:02 2018] GET /users/orders/2 => generated 8680 bytes in 123 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 12/20] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:14:04 2018] POST /orders/pay => generated 27 bytes in 38 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59327|app: 0|req: 5/20] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 11:17:18 2018] GET /users/orders/2 => generated 8620 bytes in 95 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59308|app: 0|req: 2/21] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:17:19 2018] POST /orders/pay => generated 27 bytes in 56 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 59330|app: 0|req: 11/21] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 11:17:33 2018] GET /index => generated 19282 bytes in 1874 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 13/22] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 11:17:36 2018] GET /js/slideshow.js => generated 89 bytes in 198 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 5/22] 127.0.0.1 () {42 vars in 786 bytes} [Fri Apr  6 11:17:44 2018] GET /detail/5 => generated 9772 bytes in 159 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 14/23] 127.0.0.1 () {48 vars in 892 bytes} [Fri Apr  6 11:17:45 2018] POST /cart/add => generated 29 bytes in 86 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+[pid: 59328|app: 0|req: 6/23] 127.0.0.1 () {44 vars in 817 bytes} [Fri Apr  6 11:17:47 2018] GET /detail/5 => generated 9772 bytes in 115 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59310|app: 0|req: 7/24] 127.0.0.1 () {42 vars in 783 bytes} [Fri Apr  6 11:17:52 2018] GET /cart/ => generated 13145 bytes in 86 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 12/24] 127.0.0.1 () {50 vars in 965 bytes} [Fri Apr  6 11:17:55 2018] POST /orders/place => generated 6997 bytes in 60 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 5.196 seconds.
+Prefix dict has been built succesfully.
+[pid: 59312|app: 0|req: 15/25] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 11:17:57 2018] POST /orders/commit => generated 62 bytes in 5838 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+
+[pid: 59309|app: 0|req: 2/26] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 11:18:07 2018] GET /users/orders/1 => generated 7706 bytes in 1981 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+Loading model cost 8.055 seconds.
+Prefix dict has been built succesfully.
+[pid: 59330|app: 0|req: 13/25] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 11:18:02 2018] POST /orders/commit => generated 62 bytes in 9724 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 14/26] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 11:18:12 2018] POST /orders/pay => generated 27 bytes in 53 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 8/27] 127.0.0.1 () {40 vars in 689 bytes} [Fri Apr  6 11:50:05 2018] GET /js/slideshow.js => generated 89 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 15/27] 127.0.0.1 () {40 vars in 689 bytes} [Fri Apr  6 11:50:05 2018] GET /js/slideshow.js => generated 89 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59308|app: 0|req: 3/28] 127.0.0.1 () {42 vars in 787 bytes} [Fri Apr  6 11:50:15 2018] GET /users/login => generated 2317 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 16/28] 127.0.0.1 () {50 vars in 969 bytes} [Fri Apr  6 11:50:25 2018] POST /users/login => generated 0 bytes in 128 msecs (HTTP/1.1 302) 6 headers in 392 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 59310|app: 0|req: 9/29] 127.0.0.1 () {44 vars in 817 bytes} [Fri Apr  6 11:50:25 2018] GET /index => generated 19282 bytes in 314 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 7/29] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 11:50:26 2018] GET /js/slideshow.js => generated 89 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 10/30] 127.0.0.1 () {42 vars in 780 bytes} [Fri Apr  6 11:50:27 2018] GET /cart/ => generated 12125 bytes in 101 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[b'29', b'5', b'3', b'1', b'17']
+[pid: 59330|app: 0|req: 17/30] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 11:50:29 2018] GET /users/ => generated 6612 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[b'29', b'5', b'3', b'1', b'17']
+[pid: 59309|app: 0|req: 3/31] 127.0.0.1 () {42 vars in 783 bytes} [Fri Apr  6 12:06:55 2018] GET /users/ => generated 6612 bytes in 144 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+
+[pid: 59328|app: 0|req: 8/31] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 12:06:58 2018] GET /users/orders/1 => generated 7836 bytes in 90 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59309|app: 0|req: 4/32] 127.0.0.1 () {44 vars in 830 bytes} [Fri Apr  6 12:09:51 2018] GET /users/orders/1 => generated 7885 bytes in 93 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59326|app: 0|req: 2/32] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 12:10:06 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+
+[pid: 59310|app: 0|req: 11/33] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:15:11 2018] GET /users/orders/2 => generated 7950 bytes in 99 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 18/33] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:15:13 2018] POST /orders/pay => generated 27 bytes in 49 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59308|app: 0|req: 4/34] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:15:36 2018] GET /users/orders/3 => generated 7946 bytes in 180 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 19/34] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:15:37 2018] POST /orders/pay => generated 27 bytes in 11 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+[pid: 59310|app: 0|req: 12/35] 127.0.0.1 () {42 vars in 720 bytes} [Fri Apr  6 12:17:17 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[b'29', b'5', b'3', b'1', b'17']
+[pid: 59328|app: 0|req: 9/35] 127.0.0.1 () {42 vars in 777 bytes} [Fri Apr  6 12:17:20 2018] GET /users/ => generated 6612 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+没有缓存数据,从mysql中读取
+[pid: 59310|app: 0|req: 13/36] 127.0.0.1 () {42 vars in 781 bytes} [Fri Apr  6 12:17:23 2018] GET /index => generated 19282 bytes in 187 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 59326|app: 0|req: 3/36] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 12:17:23 2018] GET /js/slideshow.js => generated 89 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[b'29', b'5', b'3', b'1', b'17']
+[pid: 59312|app: 0|req: 16/37] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 12:17:24 2018] GET /users/ => generated 6612 bytes in 70 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+
+[pid: 59328|app: 0|req: 10/37] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 12:17:26 2018] GET /users/orders/1 => generated 7885 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59310|app: 0|req: 14/38] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 12:17:28 2018] GET /orders/comment/20181804/06/181118031 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59327|app: 0|req: 6/38] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 12:17:31 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+
+[pid: 59310|app: 0|req: 15/39] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:17:33 2018] GET /users/orders/2 => generated 7950 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 11/39] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:17:34 2018] POST /orders/pay => generated 27 bytes in 195 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59310|app: 0|req: 16/40] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:18:23 2018] GET /users/orders/3 => generated 7946 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59328|app: 0|req: 12/40] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:18:24 2018] POST /orders/pay => generated 27 bytes in 9 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 17/41] 127.0.0.1 () {42 vars in 720 bytes} [Fri Apr  6 12:19:36 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[b'29', b'5', b'3', b'1', b'17']
+[pid: 59330|app: 0|req: 20/41] 127.0.0.1 () {42 vars in 777 bytes} [Fri Apr  6 12:19:43 2018] GET /users/ => generated 6612 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+
+[pid: 59310|app: 0|req: 17/42] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 12:19:48 2018] GET /users/orders/1 => generated 7885 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59330|app: 0|req: 21/42] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:19:49 2018] GET /users/orders/2 => generated 7950 bytes in 37 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59310|app: 0|req: 18/43] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:19:51 2018] POST /orders/pay => generated 27 bytes in 10 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+[pid: 59326|app: 0|req: 4/43] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:19:58 2018] POST /orders/pay => generated 27 bytes in 157 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59312|app: 0|req: 18/44] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 12:21:15 2018] GET /users/orders/2 => generated 7950 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 13/44] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:21:17 2018] POST /orders/pay => generated 27 bytes in 8 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59312|app: 0|req: 19/45] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 12:21:34 2018] GET /users/orders/2 => generated 7950 bytes in 64 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59327|app: 0|req: 7/45] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:21:35 2018] GET /users/orders/3 => generated 7946 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 20/46] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:21:36 2018] POST /orders/pay => generated 27 bytes in 9 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59326|app: 0|req: 5/46] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:21:38 2018] GET /users/orders/2 => generated 7950 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 19/47] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:21:40 2018] POST /orders/pay => generated 27 bytes in 9 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+
+[pid: 59327|app: 0|req: 8/47] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:21:41 2018] GET /users/orders/3 => generated 7946 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59309|app: 0|req: 5/48] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 12:22:20 2018] GET /users/orders/3 => generated 7946 bytes in 68 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59326|app: 0|req: 6/48] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 12:22:21 2018] POST /orders/pay => generated 27 bytes in 10 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 1)
+
+[pid: 59309|app: 0|req: 6/49] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 12:22:23 2018] GET /users/orders/4 => generated 10444 bytes in 87 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59326|app: 0|req: 7/49] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 12:22:24 2018] GET /orders/comment/20185104/03/181951551 => generated 110 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59308|app: 0|req: 5/50] 127.0.0.1 () {44 vars in 882 bytes} [Fri Apr  6 12:23:17 2018] GET /orders/comment/20185104/03/181951551 => generated 110 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 22/50] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 12:23:21 2018] GET /orders/comment/20185104/03/181951551 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 21/51] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:19:42 2018] GET /orders/comment/20185104/03/181951551 => generated 110 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+
+[pid: 59330|app: 0|req: 23/51] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:19:49 2018] GET /users/orders/1 => generated 7885 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59310|app: 0|req: 20/52] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:19:52 2018] GET /users/orders/2 => generated 7950 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 24/52] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 14:19:53 2018] POST /orders/pay => generated 27 bytes in 7 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 22/53] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 14:22:49 2018] POST /orders/pay => generated 27 bytes in 10 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 59327|app: 0|req: 9/53] 127.0.0.1 () {40 vars in 689 bytes} [Fri Apr  6 14:23:23 2018] GET /js/slideshow.js => generated 89 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+
+[pid: 59310|app: 0|req: 21/54] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:23:57 2018] GET /users/orders/1 => generated 7885 bytes in 41 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 59326|app: 0|req: 8/54] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:24:02 2018] GET /users/orders/2 => generated 7950 bytes in 48 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 59312|app: 0|req: 23/55] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:24:04 2018] GET /users/orders/1 => generated 7885 bytes in 45 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59328|app: 0|req: 14/55] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:24:09 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+
+[pid: 59312|app: 0|req: 24/56] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 14:24:59 2018] GET /users/orders/1 => generated 7885 bytes in 54 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 15/56] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:25:01 2018] GET /orders/comment/20181804/06/181118031 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59309|app: 0|req: 7/57] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:25:43 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 20 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59328|app: 0|req: 16/57] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:28:18 2018] GET /orders/comment/20181804/06/181118031 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59310|app: 0|req: 22/58] 127.0.0.1 () {44 vars in 882 bytes} [Fri Apr  6 14:33:01 2018] GET /orders/comment/20181804/06/181118031 => generated 110 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59327|app: 0|req: 10/58] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:33:06 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 25/59] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:33:17 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 25/59] 127.0.0.1 () {42 vars in 851 bytes} [Fri Apr  6 14:33:21 2018] GET /orders/comment/20182104/06/181121461 => generated 110 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 59310|app: 0|req: 23/60] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 14:35:52 2018] GET /index => generated 19282 bytes in 202 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 59330|app: 0|req: 26/60] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 14:35:52 2018] GET /js/slideshow.js => generated 89 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 59310|app: 0|req: 24/61] 127.0.0.1 () {42 vars in 788 bytes} [Fri Apr  6 14:35:55 2018] GET /detail/17 => generated 9772 bytes in 80 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 27/61] 127.0.0.1 () {48 vars in 893 bytes} [Fri Apr  6 14:35:56 2018] POST /cart/add => generated 29 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+[pid: 59312|app: 0|req: 26/62] 127.0.0.1 () {44 vars in 819 bytes} [Fri Apr  6 14:35:58 2018] GET /detail/17 => generated 9772 bytes in 57 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59326|app: 0|req: 9/62] 127.0.0.1 () {42 vars in 784 bytes} [Fri Apr  6 14:35:59 2018] GET /cart/ => generated 13146 bytes in 18 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 59312|app: 0|req: 27/63] 127.0.0.1 () {50 vars in 965 bytes} [Fri Apr  6 14:36:01 2018] POST /orders/place => generated 6995 bytes in 53 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 59330|app: 0|req: 28/63] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 14:36:02 2018] POST /orders/commit => generated 62 bytes in 180 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+
+[pid: 59312|app: 0|req: 28/64] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 14:36:05 2018] GET /users/orders/1 => generated 8050 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr  6 14:54:53 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0x15cc5f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x15cc5f0 pid: 70413 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 70413)
+spawned uWSGI worker 1 (pid: 70417, cores: 2)
+spawned uWSGI worker 2 (pid: 70418, cores: 2)
+spawned uWSGI worker 3 (pid: 70419, cores: 2)
+spawned uWSGI worker 4 (pid: 70421, cores: 2)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr  6 14:54:55 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8081 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0xfce5f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xfce5f0 pid: 70427 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 70427)
+spawned uWSGI worker 1 (pid: 70435, cores: 2)
+spawned uWSGI worker 2 (pid: 70436, cores: 2)
+spawned uWSGI worker 3 (pid: 70437, cores: 2)
+spawned uWSGI worker 4 (pid: 70439, cores: 2)
+[pid: 70419|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 689 bytes} [Fri Apr  6 14:55:01 2018] GET /js/slideshow.js => generated 89 bytes in 225 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[b'17', b'29', b'5', b'3', b'1']
+[pid: 70435|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 777 bytes} [Fri Apr  6 14:55:03 2018] GET /users/ => generated 6612 bytes in 298 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 70419|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 781 bytes} [Fri Apr  6 14:55:06 2018] GET /cart/ => generated 12125 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 70439|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 798 bytes} [Fri Apr  6 14:55:08 2018] GET /users/orders/1 => generated 8050 bytes in 1011 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 70419|app: 0|req: 3/3] 127.0.0.1 () {44 vars in 829 bytes} [Fri Apr  6 14:57:26 2018] GET /users/orders/1 => generated 8050 bytes in 123 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 70435|app: 0|req: 2/3] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:57:29 2018] GET /users/orders/2 => generated 8117 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+
+[pid: 70417|app: 0|req: 1/4] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:57:32 2018] GET /users/orders/3 => generated 8118 bytes in 258 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 70437|app: 0|req: 1/4] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:57:33 2018] GET /users/orders/4 => generated 8967 bytes in 265 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+
+[pid: 70419|app: 0|req: 4/5] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 14:57:35 2018] GET /users/orders/3 => generated 8118 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 70439|app: 0|req: 2/5] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 14:57:37 2018] GET /index => generated 19282 bytes in 188 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 70417|app: 0|req: 2/6] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 14:57:37 2018] GET /js/slideshow.js => generated 89 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 70436|app: 0|req: 1/6] 127.0.0.1 () {42 vars in 788 bytes} [Fri Apr  6 14:57:39 2018] GET /detail/17 => generated 9772 bytes in 392 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 70417|app: 0|req: 3/7] 127.0.0.1 () {48 vars in 893 bytes} [Fri Apr  6 14:57:41 2018] POST /cart/add => generated 29 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+[pid: 70439|app: 0|req: 3/7] 127.0.0.1 () {42 vars in 784 bytes} [Fri Apr  6 14:57:42 2018] GET /cart/ => generated 13146 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 70418|app: 0|req: 1/8] 127.0.0.1 () {50 vars in 965 bytes} [Fri Apr  6 14:57:43 2018] POST /orders/place => generated 6995 bytes in 574 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+20185704/06/181457451
+**************************************************
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 1.052 seconds.
+Prefix dict has been built succesfully.
+[pid: 70439|app: 0|req: 4/8] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 14:57:45 2018] POST /orders/commit => generated 62 bytes in 1118 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+
+[pid: 70418|app: 0|req: 2/9] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 14:57:50 2018] GET /users/orders/1 => generated 8046 bytes in 99 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 70436|app: 0|req: 2/9] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 15:02:39 2018] GET /index => generated 19282 bytes in 196 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 70418|app: 0|req: 3/10] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 15:02:40 2018] GET /js/slideshow.js => generated 89 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 70437|app: 0|req: 2/10] 127.0.0.1 () {42 vars in 786 bytes} [Fri Apr  6 15:02:41 2018] GET /detail/4 => generated 9769 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 70417|app: 0|req: 4/11] 127.0.0.1 () {48 vars in 892 bytes} [Fri Apr  6 15:02:42 2018] POST /cart/add => generated 29 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+[pid: 70437|app: 0|req: 3/11] 127.0.0.1 () {42 vars in 783 bytes} [Fri Apr  6 15:02:43 2018] GET /cart/ => generated 13142 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 70417|app: 0|req: 5/12] 127.0.0.1 () {50 vars in 965 bytes} [Fri Apr  6 15:02:44 2018] POST /orders/place => generated 6994 bytes in 20 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+201804061502461
+**************************************************
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.859 seconds.
+Prefix dict has been built succesfully.
+[pid: 70436|app: 0|req: 3/12] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 15:02:46 2018] POST /orders/commit => generated 62 bytes in 916 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+
+[pid: 70418|app: 0|req: 4/13] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:02:50 2018] GET /users/orders/1 => generated 8148 bytes in 135 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+201804061502461
+--------------------------------------------------
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+[pid: 70439|app: 0|req: 5/13] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 15:03:04 2018] POST /orders/pay => generated 817 bytes in 257 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+40004
+40004
+201804061502461
+--------------------------------------------------
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+[pid: 70439|app: 0|req: 6/14] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 15:03:11 2018] POST /orders/pay => generated 815 bytes in 81 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+没有缓存数据,从mysql中读取
+40004
+[pid: 70437|app: 0|req: 4/15] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 15:04:10 2018] GET /index => generated 19282 bytes in 210 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 70439|app: 0|req: 7/16] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 15:04:10 2018] GET /js/slideshow.js => generated 89 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+40004
+[pid: 70439|app: 0|req: 8/17] 127.0.0.1 () {42 vars in 786 bytes} [Fri Apr  6 15:04:12 2018] GET /detail/9 => generated 9774 bytes in 30 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+[pid: 70439|app: 0|req: 9/18] 127.0.0.1 () {48 vars in 892 bytes} [Fri Apr  6 15:04:13 2018] POST /cart/add => generated 29 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+[pid: 70436|app: 0|req: 4/19] 127.0.0.1 () {42 vars in 783 bytes} [Fri Apr  6 15:04:13 2018] GET /cart/ => generated 13148 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+[pid: 70439|app: 0|req: 10/20] 127.0.0.1 () {50 vars in 965 bytes} [Fri Apr  6 15:04:14 2018] POST /orders/place => generated 7001 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+201804061504161
+**************************************************
+[pid: 70436|app: 0|req: 5/21] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 15:04:16 2018] POST /orders/commit => generated 62 bytes in 45 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+
+[pid: 70439|app: 0|req: 11/22] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:04:19 2018] GET /users/orders/1 => generated 8142 bytes in 69 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+--------------------------------------------------
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+[pid: 70419|app: 0|req: 5/14] 127.0.0.1 () {48 vars in 902 bytes} [Fri Apr  6 15:04:24 2018] POST /orders/pay => generated 810 bytes in 214 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA3XY7/yCYU80Fa7CnavaEo+QBB+HihQCSTo2nrYsP+ijCv4rX
+0fupsKHJ5T1Ix14Y4CxRmcwmii2Df+yPAbFIds23Qrv0IUqm4Vh1ONlv9mtMCDfr
+KNNAesR9b+8fL36RzjstlEofHDpvUTWGDjbMSoQUhOu90qhhnqS4cp8ocG5rr2dX
+lMAqiB03ySQ/AGcCr6xIh7/lbWvv+Wlb/ccASew6XzqsER3uMzLYfPCwEHvBFlEn
+O2mIKRUMB2EfCjsNx1pwiNghUdNYnB9QaFvMT0FU3qejoYzyjyF7yoUo6/xvKIvw
+uNykqd3gxboPwtSsgCK89B/BMH5QobCQ7StTGwIDAQABAoIBABWkyYZMpDaEcgQt
+Vp9gimQOE3+2ttGy1ZmxxHJ0hdI4C5h2tFMEWng1x6qMy8EYVCwMiMkUJ6wXeKOW
+9f7/WYqq3j86aUibqCWb5JDyxzt5Dww6ktQBmWqmK3A2GYElyJA0Pmcgu1uh5mE0
+bu6SsnKR6AN5mqqs5CWCCbjCD0y1f2buUfsl2qb/+n6zRRV9ep6YwS+YvyXsaaEd
+Ah2sjPb3/mB+sNURgzoA+NSfXf9EUC5wyhIUnP6/JGUdh43QoZq+bE0cf8K3j959
+L18/MeSP+PLGXfTN9J/r/QX8RMA+/eJ6CcUBnx3iBdRQZdBBKF3VayMvdvIHg1pp
+WJzRLIkCgYEA9UORnr40B7Q5XowtKBNSJ4bOy/v53VqKsoL2gA6wx9i5anRFVVe/
+FuBC3nukNot6EqnjJ1yiA8NQUN85yyOfTTiV07P8PHv+m7fFGDfvszZPbp0YIbkH
+nzYvl95bth+/GtvbT7YH3RcTmQk6jt7EGhFgvfPn0RJ+RVi643bN/F0CgYEA5yfw
+YnyfzwTd1V+/V3w6JH/SgPfuh7UM+9pYWcSxeUAyzGGLAj1foPIgBpJMK44bZz++
+6nPBcFvZyfmX0CZkI4ucAKbxXLujeRAdtlpyXhffA4X5ebU0VOk/ZFfdt9fhec/A
+Kr3ekSfePHOgO5lTA+eDFh5e8TdxI/LhA0TP1dcCgYEAy+7j/UeQAbvkW+5YedMe
+44jfGJOq3lgzrVzh0/bjHTjia1bEc8LjPAU69L1//G6bETu7ifYnLNPRS31hE7zJ
+766WPhKRMEW1ngr+0jVolO4avBHZh+jPIp4ukqusPFJHV/DpeW0VOsu+WuhmjXdD
+PZ2ngCp3XctvvP+bXhliC20CgYEA0goKdZNEKvoDEEVmOfpZYpz7C9E9XvZ2i8rF
+CRyfHsvk3K2tgCWAZWBdFVuN9u2znMfhlGwGUzBC3zH6blrUFzBeWoFXQ6oESpcI
+SJA656DNNghgveSXXqhqv6TPhKOW7/aEaNIKEN+nIkr2R/Fz61JMXKbQImL8XWvu
+Zef66hUCgYBdUh94If/zadkftyy241BiyBT6D2FvXKT+UYQ3n/IeN6jedc77ppJ7
+zojxptP5q5fIjfa+CTousmgWPM0B0/W4biHCWrIVeivCg2/m+7gugOcIX1gddx6X
+dI4Un5sQqrTEatgJe+RagyKcT7cDfICJrziOAe128iGs2iN3R0iWNw==
+-----END RSA PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAthpbxJ+Y4zSfmJ/ybd3rzJUxZl1dIhRXcrvO/5dAbCLStffc5kU7GvFTgCj1iYdmnx5xovFCMD7Ssb64bBc56tWbNJCodsDw2pupUB/q7XFGBf+J8RmQY+Fp8P9sDMCcBb4W/dGeGzKz9fxGibUuWBbZ5Ncz0LM4AesImKCa1xuAQIFC+OiKkauTJCo1yVcd8t+nUlvxNU8x2K+dG5H7c4pk9JU10S+QqvU7J8WMVbM1rBGjiIwGy0CtxxUkAhqbH6kTyKLAyBeRejRYjktd/S36VVVLrxG4RU4l6aMfJEHMKBOPEDZ2g4Ev4tWJHwJh7jlA3bRcYKmVWGJYjCvwZwIDAQAB
+-----END PUBLIC KEY-----
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+10000
+40004
+40004
+40004
+10000
+40004
+40004
+40004
+10000
+40004
+40004
+10000
+40004
+[pid: 70439|app: 0|req: 12/23] 127.0.0.1 () {48 vars in 906 bytes} [Fri Apr  6 15:04:24 2018] POST /orders/check => generated 50 bytes in 37020 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 1)
+
+[pid: 70419|app: 0|req: 6/15] 127.0.0.1 () {44 vars in 838 bytes} [Fri Apr  6 15:05:01 2018] GET /users/orders/1 => generated 8142 bytes in 273 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70439|app: 0|req: 13/24] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 15:05:09 2018] GET /orders/comment/201804061504161 => generated 2972 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70419|app: 0|req: 7/16] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 15:42:29 2018] GET /users/ => generated 6601 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+40004
+
+[pid: 70436|app: 0|req: 6/25] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 15:42:30 2018] GET /users/orders/1 => generated 8142 bytes in 91 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70419|app: 0|req: 8/17] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 15:42:35 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70436|app: 0|req: 7/26] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:50 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70421|app: 0|req: 2/18] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:52 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 40 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+201804061504161
+[pid: 70439|app: 0|req: 14/27] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:52 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+201804061504161
+[pid: 70419|app: 0|req: 9/19] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:53 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70439|app: 0|req: 15/28] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:53 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70418|app: 0|req: 5/20] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:51:54 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70436|app: 0|req: 8/29] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 15:51:55 2018] GET /users/ => generated 6601 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+
+[pid: 70419|app: 0|req: 10/21] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 15:51:57 2018] GET /users/orders/1 => generated 8089 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+201804061504161
+40004
+[pid: 70436|app: 0|req: 9/30] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 15:51:58 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70421|app: 0|req: 3/22] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:53:28 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+201804061504161
+[pid: 70439|app: 0|req: 16/31] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:53:29 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+201804061504161
+[pid: 70418|app: 0|req: 6/23] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:53:29 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+201804061504161
+40004
+[pid: 70439|app: 0|req: 17/32] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:53:30 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+201804061504161
+[pid: 70417|app: 0|req: 7/24] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:53:31 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70439|app: 0|req: 18/33] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 15:53:44 2018] GET /users/ => generated 6601 bytes in 34 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+
+[pid: 70419|app: 0|req: 11/25] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 15:53:46 2018] GET /users/orders/1 => generated 8089 bytes in 49 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+40004
+40004
+201804061504161
+[pid: 70436|app: 0|req: 10/34] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 15:53:47 2018] GET /orders/comment/201804061504161 => generated 2970 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70417|app: 0|req: 8/26] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:19 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+40004
+201804061504161
+[pid: 70439|app: 0|req: 19/35] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:20 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 57 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70417|app: 0|req: 9/27] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:20 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70439|app: 0|req: 20/36] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:20 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+201804061504161
+[pid: 70418|app: 0|req: 7/28] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:21 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70439|app: 0|req: 21/37] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:21 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+201804061504161
+[pid: 70421|app: 0|req: 4/29] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:21 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+201804061504161
+[pid: 70439|app: 0|req: 22/38] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:55:21 2018] GET /orders/comment/201804061504161 => generated 2946 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+没有缓存数据,从mysql中读取
+[pid: 70421|app: 0|req: 5/30] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:55:23 2018] GET /index => generated 19282 bytes in 274 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 70439|app: 0|req: 23/39] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 15:55:23 2018] GET /js/slideshow.js => generated 89 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+40004
+40004
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70418|app: 0|req: 8/31] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 15:55:24 2018] GET /users/ => generated 2984 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+
+[pid: 70439|app: 0|req: 24/40] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 15:55:27 2018] GET /users/orders/1 => generated 4806 bytes in 40 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+
+[pid: 70421|app: 0|req: 6/32] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 15:55:29 2018] GET /users/orders/1 => generated 4806 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+[pid: 70439|app: 0|req: 25/41] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:55:29 2018] GET /users/address => generated 2984 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70419|app: 0|req: 12/33] 127.0.0.1 () {42 vars in 790 bytes} [Fri Apr  6 15:55:30 2018] GET /users/ => generated 2984 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+
+[pid: 70439|app: 0|req: 26/42] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 15:55:31 2018] GET /users/orders/1 => generated 4806 bytes in 64 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+[pid: 70421|app: 0|req: 7/34] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:55:32 2018] GET /users/address => generated 2984 bytes in 76 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+
+[pid: 70439|app: 0|req: 27/43] 127.0.0.1 () {42 vars in 806 bytes} [Fri Apr  6 15:55:32 2018] GET /users/orders/1 => generated 4806 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+
+[pid: 70421|app: 0|req: 8/35] 127.0.0.1 () {42 vars in 807 bytes} [Fri Apr  6 15:55:34 2018] GET /users/orders/1 => generated 4806 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 70439|app: 0|req: 28/44] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 15:55:34 2018] GET /users/address => generated 2984 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+40004
+40004
+[pid: 70419|app: 0|req: 13/36] 127.0.0.1 () {42 vars in 788 bytes} [Fri Apr  6 15:55:36 2018] GET /cart/ => generated 12125 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+
+[pid: 70437|app: 0|req: 5/45] 127.0.0.1 () {42 vars in 798 bytes} [Fri Apr  6 15:55:37 2018] GET /users/orders/1 => generated 4806 bytes in 46 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+
+40004
+[pid: 70421|app: 0|req: 9/37] 127.0.0.1 () {44 vars in 829 bytes} [Fri Apr  6 15:55:56 2018] GET /users/orders/1 => generated 8093 bytes in 65 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70439|app: 0|req: 29/46] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 15:56:01 2018] GET /orders/comment/201804061504161 => generated 4841 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+201804061504161
+[pid: 70421|app: 0|req: 10/38] 127.0.0.1 () {44 vars in 870 bytes} [Fri Apr  6 15:56:22 2018] GET /orders/comment/201804061504161 => generated 4823 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[pid: 70437|app: 0|req: 6/47] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 15:57:42 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 3 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[pid: 70419|app: 0|req: 14/39] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:02:11 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 3 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[pid: 70437|app: 0|req: 7/48] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:12:24 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 2 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+没有缓存数据,从mysql中读取
+[pid: 70421|app: 0|req: 11/40] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 16:12:36 2018] GET /index => generated 19282 bytes in 186 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 70435|app: 0|req: 4/49] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 16:12:36 2018] GET /js/slideshow.js => generated 89 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70421|app: 0|req: 12/41] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 16:12:40 2018] GET /users/ => generated 6605 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+[pid: 70437|app: 0|req: 8/50] 127.0.0.1 () {42 vars in 787 bytes} [Fri Apr  6 16:12:42 2018] GET /detail/9 => generated 9774 bytes in 31 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 70421|app: 0|req: 13/42] 127.0.0.1 () {42 vars in 785 bytes} [Fri Apr  6 16:12:45 2018] GET /users/ => generated 6605 bytes in 27 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+
+[pid: 70439|app: 0|req: 30/51] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 16:12:46 2018] GET /users/orders/1 => generated 8093 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+40004
+40004
+201804061504161
+[pid: 70419|app: 0|req: 15/43] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 16:12:47 2018] GET /orders/comment/201804061504161 => generated 4823 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[pid: 70435|app: 0|req: 5/52] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:12:56 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 3 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+[pid: 70418|app: 0|req: 9/44] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:13:02 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 3 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+[pid: 70439|app: 0|req: 31/53] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:14:17 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 3 msecs (HTTP/1.1 405) 3 headers in 131 bytes (1 switches on core 0)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+没有缓存数据,从mysql中读取
+[pid: 70419|app: 0|req: 16/45] 127.0.0.1 () {42 vars in 805 bytes} [Fri Apr  6 16:14:27 2018] GET /index => generated 19282 bytes in 205 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+40004
+[pid: 70435|app: 0|req: 6/54] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 16:14:27 2018] GET /js/slideshow.js => generated 89 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr  6 16:14:43 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:8080).
+bind(): Address already in use [core/socket.c line 769]
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+40004
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr  6 16:14:58 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8080 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0xad35f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xad35f0 pid: 72209 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 72209)
+spawned uWSGI worker 1 (pid: 72213, cores: 2)
+spawned uWSGI worker 2 (pid: 72214, cores: 2)
+spawned uWSGI worker 3 (pid: 72217, cores: 2)
+spawned uWSGI worker 4 (pid: 72219, cores: 2)
+*** Starting uWSGI 2.0.17 (64bit) on [Fri Apr  6 16:15:01 2018] ***
+compiled with version: 5.4.0 20160609 on 03 April 2018 13:21:09
+os: Linux-4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /home/python/PycharmProjects/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/django_py3/bin/uwsgi
+chdir() to /home/python/PycharmProjects/dailyfresh
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8081 fd 3
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/python/.virtualenvs/django_py3
+Python main interpreter initialized at 0x15325f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x15325f0 pid: 72227 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 72227)
+spawned uWSGI worker 1 (pid: 72232, cores: 2)
+spawned uWSGI worker 2 (pid: 72233, cores: 2)
+spawned uWSGI worker 3 (pid: 72234, cores: 2)
+spawned uWSGI worker 4 (pid: 72236, cores: 2)
+没有缓存数据,从mysql中读取
+[pid: 72214|app: 0|req: 1/1] 127.0.0.1 () {42 vars in 780 bytes} [Fri Apr  6 16:15:26 2018] GET /index => generated 19282 bytes in 670 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 72232|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 16:15:27 2018] GET /js/slideshow.js => generated 89 bytes in 211 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[b'9', b'4', b'17', b'29', b'5']
+[pid: 72214|app: 0|req: 2/2] 127.0.0.1 () {42 vars in 782 bytes} [Fri Apr  6 16:15:32 2018] GET /users/ => generated 6605 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+
+[pid: 72234|app: 0|req: 1/2] 127.0.0.1 () {42 vars in 799 bytes} [Fri Apr  6 16:15:37 2018] GET /users/orders/1 => generated 8093 bytes in 302 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+201804061504161
+[pid: 72217|app: 0|req: 1/3] 127.0.0.1 () {42 vars in 839 bytes} [Fri Apr  6 16:15:41 2018] GET /orders/comment/201804061504161 => generated 4823 bytes in 279 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 72234|app: 0|req: 2/3] 127.0.0.1 () {50 vars in 1028 bytes} [Fri Apr  6 16:15:49 2018] POST /orders/comment/201804061504161 => generated 0 bytes in 61 msecs (HTTP/1.1 302) 4 headers in 148 bytes (1 switches on core 1)
+
+[pid: 72217|app: 0|req: 2/4] 127.0.0.1 () {44 vars in 854 bytes} [Fri Apr  6 16:15:49 2018] GET /users/orders/1 => generated 8093 bytes in 77 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+没有缓存数据,从mysql中读取
+[pid: 72234|app: 0|req: 3/4] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 16:28:24 2018] GET /index => generated 19282 bytes in 283 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 72213|app: 0|req: 1/5] 127.0.0.1 () {40 vars in 694 bytes} [Fri Apr  6 16:28:24 2018] GET /js/slideshow.js => generated 89 bytes in 277 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 72234|app: 0|req: 4/5] 127.0.0.1 () {42 vars in 786 bytes} [Fri Apr  6 16:28:27 2018] GET /detail/6 => generated 9773 bytes in 35 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 72213|app: 0|req: 2/6] 127.0.0.1 () {44 vars in 817 bytes} [Fri Apr  6 16:49:04 2018] GET /detail/6 => generated 11578 bytes in 165 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 1)
+[pid: 72233|app: 0|req: 1/6] 127.0.0.1 () {42 vars in 789 bytes} [Fri Apr  6 16:49:16 2018] GET /detail/9 => generated 11750 bytes in 280 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 72217|app: 0|req: 3/7] 127.0.0.1 () {48 vars in 892 bytes} [Fri Apr  6 17:22:03 2018] POST /cart/add => generated 29 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 94 bytes (1 switches on core 0)
+[pid: 72234|app: 0|req: 5/7] 127.0.0.1 () {42 vars in 783 bytes} [Fri Apr  6 17:22:06 2018] GET /cart/ => generated 13148 bytes in 19 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)

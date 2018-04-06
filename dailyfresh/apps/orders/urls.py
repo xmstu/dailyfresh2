@@ -19,4 +19,8 @@ from .views import *
 urlpatterns = [
     url(r'^place$', OrderPlaceView.as_view(), name='place'),
     url(r'^commit$', OrderCommitView.as_view(), name='commit'),
+    url(r'^pay$', OrderPayView.as_view(), name='pay'),
+    url(r'^check$', CheckPayView.as_view(), name='check'),
+    # 显示商品评价界面(url参数:订单id)
+    url(r'^comment/(\d+)', CommentView.as_view(), name='comment'),
 ]

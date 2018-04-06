@@ -15,7 +15,7 @@
         <div class="left_menu_con clearfix">
             <h3>用户中心</h3>
             <ul>
-            {#提示： a标签中添加了 class=”active” 就会选中高亮了#}
+                {#提示： a标签中添加了 class=”active” 就会选中高亮了#}
                 <li><a href="{% url 'users:info' %}"
                         {% if which_page == 1 %}
                        class="active"

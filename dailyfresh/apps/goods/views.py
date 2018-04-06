@@ -6,6 +6,8 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.views.generic import View
 from django_redis import get_redis_connection
+
+from apps.orders.models import OrderGoods
 from celery_tasks.tasks import *
 from utils.common import BaseCartView
 
@@ -92,6 +94,9 @@ class DetailView(BaseCartView):
                     .order_by('-create_time')[0:2]  # 取出最新添加两个数据作为新品推荐(列表切片)
         # 详情
 
+        # todo:获取当前商品的评论comment,排除comment为空的就是有评论的商品
+        order_skus = OrderGoods.objects.filter(sku=sku).exclude(comment='')
+
         # todo:其他规格的商品sku
         other_skus = GoodsSKU.objects.filter(spu=sku.spu).exclude(id=sku_id)
         # print(other_skus)
@@ -121,6 +126,7 @@ class DetailView(BaseCartView):
             'categories':categories,
             'new_skus':new_skus,
             'cart_count':cart_count,
+            'order_skus':order_skus,
             'other_skus':other_skus,
         }
 
